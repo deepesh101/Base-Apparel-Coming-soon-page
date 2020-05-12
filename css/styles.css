@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Josefin Sans';
+  display: grid;
+  grid-template-areas:
+       "a a a b"
+       "c c c b"
+       "c c c b"
+       "c c c b";
+  padding-left: 12%;
+  background-image: url("../images/bg-pattern-desktop.svg"), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+h1 {
+  color: var(--Dark-Grayish-Red);
+  font-weight: 600   !important;
+  font-size: 3.8em;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: 0.3em;
+}
+p {
+  color: var(--Desaturated-Red);
+  line-height: 1.5;
+  margin-top: 25px;
+}
+.we-are {
+  color: var(--Desaturated-Red);
+  font-weight: 100   !important;
+}
+.brand {
+  grid-area: a ;
+  padding: 8% 0 15% 0;
+}
+.pic {
+  grid-area: b ;
+  width: 540px;
+  height: 804px;
+  background-image: url("../images/hero-desktop.jpg");
+  background-size: cover;
+}
+.content {
+  grid-area: c ;
+  padding-right: 32%;
+  position: relative;
+}
+.email {
+  font-size: 16px;
+  font-family: 'Josefin Sans';
+  width: 380px;
+  height: 45px;
+  border-radius: 2em;
+  padding-left: 10%;
+  border: 1px solid var(--Transparent-Desaturated-Red);
+  background: none;
+  margin-top: 50px;
+}
+::placeholder {
+  color: var(--Desaturated-Red);
+  font-size: 16px;
+  opacity: 50%;
+}
+.arrow {
+  width: 80px;
+  height: 49px;
+  border-radius: 2em;
+  box-shadow: 0px 8px 10px var(--Transparent-Desaturated-Red) ;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+}
+.button {
+  position: relative;
+  bottom: 49px;
+  left: 340px;
+}
+.arrow:hover, .arrow:active {
+  background-image: linear-gradient(135deg, hsla(0, 80%, 86%, 0.5), hsla(0, 74%, 74%, 0.5));
+  width: 82px;
+}
+.error {
+  padding: 5px 5px 0 0;
+  width: 4.5%;
+}
+.red {
+  color: var(--Soft-Red);
+  padding: 44px;
+  position: absolute;
+  top: 360px;
+}
+.hidden{
+  visibility: hidden;
+}
+.border {
+  border: 1px solid var(--Soft-Red);
+}
+@media (max-width : 400px) {
+  body {
+    text-align: center;
+    display:block ;
+    padding: 0 ;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .content, .brand {
+    padding: 0;
+  }
+  .brand {
+    text-align: left;
+    padding: 7% 0 7% 7%;
+  }
+  .brand img {
+    width: 30%;
+  }
+  .pic {
+    background-image: url("../images/hero-mobile.jpg");
+    width: 100% ;
+    height: 250px;
+  }
+  .content {
+    padding: 20% 4.5% 15% ;
+  }
+  .email {
+    width: 80%;
+    margin-top: 30px;
+    height: 50px;
+  }
+  .arrow {
+    width: 65px;
+    height: 55px;
+  }
+  .button {
+    bottom: 55px;
+    left: -10px;
+    width:auto;
+    text-align: right;
+  }
+  .red {
+    top: 400px;
+  }
+  .error {
+    width: auto;
+  }
+}
